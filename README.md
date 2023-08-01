@@ -1,3 +1,13 @@
+#commands for git
+
+`git init`  
+`git remote add origin` <url del git>  
+`git add .` 
+`git commit -m "commitName"`   
+`git push -u origin master`  
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -14,22 +14,33 @@ export const ACTIONS =
 function evaluate(state)
 {
 
-  if(state.operation=="/")
+  switch(state.operation)
   {
-    return (parseInt(state.previous)/parseInt(state.current)).toString()
+    case "/":
+      return (parseInt(state.previous)/parseInt(state.current)).toString()
+    case "*":
+      return (parseInt(state.previous)*parseInt(state.current)).toString()
+    case "-":
+      return (parseInt(state.previous)-parseInt(state.current)).toString()
+    case "+":
+      return (parseInt(state.previous)+parseInt(state.current)).toString()
   }
-  else if(state.operation=="*")
-  {
-    return (parseInt(state.previous)*parseInt(state.current)).toString()
-  }
-  else if(state.operation=="-")
-  {
-    return (parseInt(state.previous)-parseInt(state.current)).toString()
-  }
-  else
-  {
-    return (parseInt(state.previous)+parseInt(state.current)).toString()
-  }
+  // if(state.operation=="/")
+  // {
+  //   return (parseInt(state.previous)/parseInt(state.current)).toString()
+  // }
+  // else if(state.operation=="*")
+  // {
+  //   return (parseInt(state.previous)*parseInt(state.current)).toString()
+  // }
+  // else if(state.operation=="-")
+  // {
+  //   return (parseInt(state.previous)-parseInt(state.current)).toString()
+  // }
+  // else
+  // {
+  //   return (parseInt(state.previous)+parseInt(state.current)).toString()
+  // }
 }
 function reducer(state,{type, payload})
 {

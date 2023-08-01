@@ -17,13 +17,13 @@ function evaluate(state)
   switch(state.operation)
   {
     case "/":
-      return (parseInt(state.previous)/parseInt(state.current)).toString()
+      return ((parseFloat(state.previous)/parseFloat(state.current)).toFixed(10)).toString()
     case "*":
-      return (parseInt(state.previous)*parseInt(state.current)).toString()
+      return (parseFloat(state.previous)*parseFloat(state.current)).toFixed(10).toString()
     case "-":
-      return (parseInt(state.previous)-parseInt(state.current)).toString()
+      return (parseFloat(state.previous)-parseFloat(state.current)).toFixed(10).toString()
     case "+":
-      return (parseInt(state.previous)+parseInt(state.current)).toString()
+      return (parseFloat(state.previous)+parseFloat(state.current)).toFixed(10).toString()
   }
   // if(state.operation=="/")
   // {

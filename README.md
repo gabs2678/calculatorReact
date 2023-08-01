@@ -1,10 +1,15 @@
 #commands for git
 
 `git init`  
-`git remote add origin` <url del git>  
+`git remote add origin` <url del git> 
+`git checkout` <nameBranch> 
+`git branch`
+`git status`
 `git add .` 
 `git commit -m "commitName"`   
 `git push -u origin master`  
+
+
 
 
 

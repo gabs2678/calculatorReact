@@ -24,6 +24,8 @@ function evaluate(state)
       return (parseFloat(state.previous)-parseFloat(state.current)).toString()
     case "+":
       return (parseFloat(state.previous)+parseFloat(state.current)).toString()
+    default:
+      return;
   }
   // if(state.operation=="/")
   // {
@@ -75,7 +77,7 @@ function reducer(state,{type, payload})
         }
       }
       //"5 * - + 5" =10
-      if(state.current==null && state.operation!= null && payload.operation == "-")
+      if(state.current==null && state.operation!= null && payload.operation === "-")
       {
         return{
           ...state,
@@ -89,7 +91,7 @@ function reducer(state,{type, payload})
       //     current:null
       //   }
       // }
-      if(state.current == null || state.current== "-") {return{
+      if(state.current == null || state.current=== "-") {return{
         ...state,
         operation: payload.operation,
         current:null
@@ -121,6 +123,8 @@ function reducer(state,{type, payload})
       }
     case ACTIONS.CLEAR:
       return{current:0}
+    default:
+      return;
   }
 }
 
